@@ -1,0 +1,7 @@
+.underlined{
+    text-decoration: underline;
+}
+
+.red_border{
+    border: 2px solid red;
+}

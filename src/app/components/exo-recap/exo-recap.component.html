@@ -1,0 +1,20 @@
+<h2> Correction de l'exo de recap - {{ date | date:'EEEE dd MMMM yyyy' | answer}} </h2>
+
+<input type="text" [(ngModel)]="filterInput"  (keypress)="event($event)">
+<button (click)="onFilter()">filtrer</button>
+
+<p *ngIf="filteredList.length !== fullList.length">éléments filtrés :  {{filteredList.length | answer}}/{{fullList.length | answer:1}} </p>
+
+<ul>
+    <li *ngFor="let p of filteredList"><span [ngClass]="{underlined:p.nom.length >= 6}"> {{p.nom}} </span> - {{p.age | answer}} - {{p.ville}} </li>
+</ul>
+
+<form action="" [formGroup]="form" (submit)="onSubmit()">
+    <label for="nom">nom</label><br>
+    <input id="nom" type="text" formControlName="nom"  [ngClass]="{red_border: form.controls.nom.invalid && form.controls.nom.dirty}"><br>
+    <label for="age">age {{form.value.age | answer | currency:'CAD':'symbol-narrow':'1.5-9' }}</label><br>
+    <input id="age" type="number" min="0" max="119" formControlName="age" [ngClass]="{red_border: form.controls.age.invalid && form.controls.age.dirty}"><br>
+    <label for="ville">ville</label><br>
+    <input id="ville" type="text" formControlName="ville" [ngClass]="{red_border: form.controls.ville.invalid && form.controls.ville.dirty}"><br>
+    <button type="submit">submit</button>
+</form>

@@ -1,21 +1,4 @@
 
-<h1 [ngClass]="{ red: true, bordered: borderedHeader }" [id]="id">Form {{ a + b }}</h1>
+<app-nav></app-nav>
 
-<button (click)="showLabel = !showLabel">{{ showLabel ? "cacher" : "montrer" }} les labels</button>
-
-<form action="" [formGroup]="formulaire" (submit)="onSubmit()">
-  <div>
-    <label for="nom" [ngStyle]="{'color': labelColor}" [hidden]="!showLabel">nom</label> <br><!--nom-->
-    <input type="text" id="nom" formControlName="nom">
-    <p *ngIf="formulaire.controls.nom.invalid && formulaire.controls.nom.dirty" style="color: red;">nom invalide</p>
-  </div>
-  <div>
-    <label for="prenom" [ngStyle]="{'color': labelColor}"  [hidden]="!showLabel">prenom</label><br> <!--prenom-->
-    <input type="text" id="prenom" formControlName="prenom">
-  </div>
-  <div>
-    <label for="tel" [ngStyle]="{'color': labelColor}" [hidden]="!showLabel">tel</label><br> <!--tel-->
-    <input type="text" id="tel" formControlName="tel">
-  </div>
-  <button type="submit">submit</button>
-</form>
+<router-outlet></router-outlet>

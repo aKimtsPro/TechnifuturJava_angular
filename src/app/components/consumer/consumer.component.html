@@ -1,0 +1,24 @@
+<p>
+  consumer works!
+</p>
+
+<h5>Les hot Observables</h5>
+
+<input type="text" [(ngModel)]="inputValue">
+<button (click)="trigger()">trigger</button>
+<button (click)="subscribe()">subscribe</button>
+
+<button (click)="load()">charger les éléments</button>
+
+<h5>Les Observables d'ordre 2</h5>
+
+<button id="metaBtn">trigger metaObs</button>
+
+<h5>Les services</h5>
+
+<ul>
+  <li *ngFor="let element of data">
+    <h4>{{ element.id }} - {{ element.userId}} - {{ element.title }}</h4>
+    <p> {{element.body}} </p>
+  </li>
+</ul>

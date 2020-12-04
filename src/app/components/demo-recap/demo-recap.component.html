@@ -1,0 +1,27 @@
+
+<h1 [ngClass]="{ red: true, bordered: borderedHeader }" [id]="id">Form {{ a + b | answer }}</h1>
+
+<button (click)="showLabel = !showLabel">{{ showLabel ? "cacher" : "montrer" }} les labels</button> 
+
+<form action="" [formGroup]="formulaire" (submit)="onSubmit()">
+  <div>
+    <label for="nom1" [ngStyle]="{'color': labelColor}" [hidden]="!showLabel">nom</label> <br><!--nom-->
+    <input type="text" id="nom1" formControlName="nom">
+    <p *ngIf="formulaire.controls.nom.invalid && formulaire.controls.nom.dirty" style="color: red;">nom invalide</p>
+  </div>
+  <div>
+    <label for="prenom" [ngStyle]="{'color': labelColor}"  [hidden]="!showLabel">prenom</label><br> <!--prenom-->
+    <input type="text" id="prenom" formControlName="prenom">
+  </div>
+  <div>
+    <label for="tel" [ngStyle]="{'color': labelColor}" [hidden]="!showLabel">tel</label><br> <!--tel-->
+    <input type="text" id="tel" formControlName="tel">
+  </div>
+  <div>
+    <label for="value">demo select</label>
+    <select name="value" id="value" formControlName="value">
+      <option *ngFor="let post of postTab" [value]="post.id">{{post.title}}</option>
+    </select>
+  </div>
+  <button type="submit">submit</button>
+</form>
