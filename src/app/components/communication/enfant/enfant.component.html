@@ -1,0 +1,13 @@
+<div class="card blue-grey darken-1">
+    <div class="card-content white-text">
+        <span class="card-title">Personne d'index {{ index }} :</span>
+        <ul>
+            <li><span>nom : </span> {{personne.nom}} </li>
+            <li><span>age : </span> {{personne.age}} </li>
+            <li><span>ville : </span> {{personne.ville}} </li>
+        </ul>
+    </div>
+    <div class="card-action">
+        <button class="btn red waves-effect" (click)="onClick()">delete</button>
+    </div>
+</div>

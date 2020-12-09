@@ -10,10 +10,6 @@ export class LinksComponent implements OnInit {
   @Input()
   bgColor: string = "";
 
-  
-
-
-
   constructor() {  }
 
   ngOnInit() {

@@ -10,8 +10,9 @@ import { PipeModule } from './pipe/pipe.module';
 import { DemoRecapComponent } from './components/demo-recap/demo-recap.component';
 import { NavComponent } from './components/nav/nav.component';
 import { LinksComponent } from './components/nav/links/links.component';
-import { ConsumerComponent } from './components/consumer/consumer.component'
-import { ApiConsumerService } from './service/apiConsumer.service'
+import { ConsumerComponent } from './components/consumer/consumer.component';
+import { CommunicationComponent } from './components/communication/communication.component';
+import { EnfantComponent } from './components/communication/enfant/enfant.component';
 
 @NgModule({
   declarations: [	
@@ -20,7 +21,9 @@ import { ApiConsumerService } from './service/apiConsumer.service'
     DemoRecapComponent, 
     NavComponent,
     LinksComponent,
-    ConsumerComponent
+    ConsumerComponent,
+    CommunicationComponent,
+    EnfantComponent
    ],
   imports: [
     BrowserModule,

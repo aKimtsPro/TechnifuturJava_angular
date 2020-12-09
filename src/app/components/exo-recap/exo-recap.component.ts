@@ -2,7 +2,7 @@ import { ClassField } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Personne } from './Personne.model';
+import { Personne } from '../../model/Personne.model';
 
 @Component({
   selector: 'app-exo-recap',
@@ -75,9 +75,9 @@ export class ExoRecapComponent implements OnInit {
 
       console.log(this.router.url);
       this.router.navigateByUrl("/demo");
-      this.router.navigate([`${"de"+"mo"}`,]);
-      // this.router.navigateByUrl('/truc//machin');
-      // this.router.navigate( ['truc', 'muche', 'machin']);
+      this.router.navigate([`${"/de"+"mo"}`,]);
+      // this.router.navigateByUrl('/truc/muche/machin');
+      // this.router.navigate( ['truc/muche/machin']);
     }
   }
 

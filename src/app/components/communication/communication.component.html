@@ -1,0 +1,10 @@
+
+<h2>Liste de personnes : </h2>
+
+<app-enfant 
+    [personne]="pers" 
+    [index]="i" 
+    (delete)="onDelete($event)"
+    *ngFor="let pers of personList; let i = index"
+>
+</app-enfant>
